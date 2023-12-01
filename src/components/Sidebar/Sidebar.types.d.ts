@@ -1,3 +1,6 @@
 interface SidebarProps {
-  isOpen: boolean
+  isSidebarOpen: boolean;
+  toggleSidebar: VoidFunction;
 }
+
+interface StyledSidebar extends Pick<SidebarProps, 'isSidebarOpen'> {}

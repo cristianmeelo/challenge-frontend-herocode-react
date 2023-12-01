@@ -1,0 +1,3 @@
+interface ColumnProps {
+  column: Column;
+}

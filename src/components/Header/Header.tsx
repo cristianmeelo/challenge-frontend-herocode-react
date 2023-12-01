@@ -1,5 +1,5 @@
-import Button from '../Button/Button'
-import * as S from './Header.styles'
+import Button from '../Button/Button';
+import * as S from './Header.styles';
 
 const Header = () => {
   return (
@@ -8,6 +8,6 @@ const Header = () => {
         + Novo Card
       </Button>
     </S.Header>
-  )
-}
-export default Header
+  );
+};
+export default Header;

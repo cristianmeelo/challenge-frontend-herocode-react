@@ -1,5 +1,5 @@
-import React from 'react'
-import * as S from './SidebarItem.styles'
+import React from 'react';
+import * as S from './SidebarItem.styles';
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ icon, label, isSelected, onItemClicked }) => {
   return (
@@ -7,7 +7,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ icon, label, isSelected, onIt
       {React.cloneElement(icon, { isSelected })}
       <S.Label isSelected={isSelected}>{label}</S.Label>
     </S.Item>
-  )
-}
+  );
+};
 
-export default SidebarItem
+export default SidebarItem;

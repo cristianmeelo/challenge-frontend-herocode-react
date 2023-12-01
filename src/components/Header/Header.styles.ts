@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const Header = styled.header`
   display: flex;
@@ -10,4 +10,4 @@ export const Header = styled.header`
   height: 5.625rem;
   padding: 0 5.625rem;
   background-color: ${(props) => props.theme.colors.primary.purple_600};
-`
+`;

@@ -1,3 +1,3 @@
 interface IconProps {
-  isSelected?: boolean
+  isSelected?: boolean;
 }

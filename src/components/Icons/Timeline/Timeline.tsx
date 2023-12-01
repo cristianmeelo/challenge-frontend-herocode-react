@@ -1,5 +1,5 @@
 const Timeline = ({ isSelected }: IconProps) => {
-  const gradientColor = isSelected ? 'url(#paint0_linear_timeline_selected)' : '#6F6F6F'
+  const gradientColor = isSelected ? 'url(#paint0_linear_timeline_selected)' : '#6F6F6F';
 
   return (
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,7 +19,7 @@ const Timeline = ({ isSelected }: IconProps) => {
         </linearGradient>
       </defs>
     </svg>
-  )
-}
+  );
+};
 
-export default Timeline
+export default Timeline;

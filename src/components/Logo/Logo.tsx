@@ -16,6 +16,6 @@ const Logo = () => {
         fill="#48409E"
       />
     </svg>
-  )
-}
-export default Logo
+  );
+};
+export default Logo;

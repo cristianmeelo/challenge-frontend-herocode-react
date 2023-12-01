@@ -1,4 +1,4 @@
-import { Global, Interpolation, Theme } from '@emotion/react'
+import { Global, Interpolation, Theme } from '@emotion/react';
 
 const styles: Interpolation<Theme> = (theme) => {
   return {
@@ -27,9 +27,9 @@ const styles: Interpolation<Theme> = (theme) => {
       borderCollapse: 'collapse',
       borderSpacing: 0,
     },
-  }
-}
+  };
+};
 
 export const Styles = () => {
-  return <Global styles={styles} />
-}
+  return <Global styles={styles} />;
+};

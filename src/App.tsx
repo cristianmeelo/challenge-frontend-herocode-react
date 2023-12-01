@@ -1,13 +1,21 @@
-import { Container } from './components/Container/Container.styles'
-import Header from './components/Header/Header'
-import Sidebar from './components/Sidebar/Sidebar'
+import { useState } from 'react';
+
+import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
+import Board from './components/Board/Board';
 
 export default function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar: VoidFunction = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <>
       <Header />
-      <Sidebar />
-      <Container />
+      <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <Board isSidebarOpen={isSidebarOpen} />
     </>
-  )
+  );
 }

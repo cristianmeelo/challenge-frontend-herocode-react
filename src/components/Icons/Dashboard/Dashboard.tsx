@@ -1,5 +1,5 @@
 const Dashboard = ({ isSelected }: IconProps) => {
-  const gradientColor = isSelected ? 'url(#paint0_linear_1_36_selected)' : '#6F6F6F'
+  const gradientColor = isSelected ? 'url(#paint0_linear_1_36_selected)' : '#6F6F6F';
 
   return (
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +15,7 @@ const Dashboard = ({ isSelected }: IconProps) => {
         fill={gradientColor}
       />
     </svg>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

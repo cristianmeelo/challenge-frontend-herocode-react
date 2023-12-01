@@ -1,5 +1,5 @@
 const Event = ({ isSelected }: IconProps) => {
-  const gradientColor = isSelected ? 'url(#paint0_linear_event_selected)' : '#6F6F6F'
+  const gradientColor = isSelected ? 'url(#paint0_linear_event_selected)' : '#6F6F6F';
 
   return (
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,7 +19,7 @@ const Event = ({ isSelected }: IconProps) => {
       />
       <path d="M19.7188 6.59375H5.28125V9.21875H19.7188V6.59375Z" fill={gradientColor} />
     </svg>
-  )
-}
+  );
+};
 
-export default Event
+export default Event;
