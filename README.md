@@ -1,30 +1,9 @@
-# React + TypeScript + Vite
+Layout Figma: [Clique aqui](https://www.figma.com/file/FN5DlLxrnGycHs4E49ebDi/Tech-Challenge-Hero-Code?type=design&node-id=0-1&mode=design&t=dmniLWyMChSGv2Ta-0)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tecnologia: Você é livre para escolher a tecnologia que preferir (React, Angular, Vue.js, etc.) para implementar a solução.
 
-Currently, two official plugins are available:
+Data Limite: Submeta sua solução até o dia 10/12 para participar da competição.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Avaliação: O código será avaliado com base na fidelidade ao design, estrutura e organização do código, boas práticas de desenvolvimento, responsividade e performance.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Premiação: O desenvolvedor que apresentar a melhor solução, conforme os critérios acima, receberá um prêmio de R$100,00.
