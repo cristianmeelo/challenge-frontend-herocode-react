@@ -9,11 +9,9 @@ declare module '@emotion/react' {
         purple_600: string
       }
       neutral: {
-        white_0: string
-        black_800: string
+        white_000: string
         gray_100: string
         gray_400: string
-        gray_600: string
       }
       semantic: {
         success: {

@@ -8,11 +8,9 @@ const theme = {
       purple_600: '#48409E',
     },
     neutral: {
-      white_0: '#FFFFFF',
-      black_800: '#3D3D3D',
-      gray_100: '#F3F3F3',
-      gray_400: '#B7B7B7',
-      gray_600: '#6F6F6F',
+      white_000: '#FFFFFF',
+      gray_100: '#F2F2F2',
+      gray_400: '#6F6F6F',
     },
     semantic: {
       success: {
