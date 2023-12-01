@@ -22,7 +22,7 @@ const Sidebar = () => {
 
   return (
     <S.Sidebar isOpen={isSidebarOpen}>
-      <S.Logo onClick={toggleSidebar}>
+      <S.Logo onClick={toggleSidebar} isOpen={isSidebarOpen}>
         <Logo />
       </S.Logo>
 

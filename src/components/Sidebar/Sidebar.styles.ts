@@ -11,7 +11,8 @@ export const Sidebar = styled.aside<SidebarProps>`
   background-color: ${(props) => props.theme.colors.neutral.white_000};
 `
 
-export const Logo = styled.div`
+export const Logo = styled.div<SidebarProps>`
+  display: ${(props) => (props.isOpen ? 'flex' : 'none')};
   padding: 3.5rem 4.125rem 0rem 3.5rem;
   cursor: pointer;
 `
