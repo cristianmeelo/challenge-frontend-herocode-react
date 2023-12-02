@@ -6,6 +6,7 @@ import Board from './components/Board/Board';
 import Timeline from './components/Timeline/Timeline';
 import Calendar from './components/Calendar/Calendar';
 import List from './components/List/List';
+import Welcome from './components/Welcome/Welcome';
 
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -31,7 +32,7 @@ export default function App() {
       case 'calendário':
         return <Calendar isSidebarOpen={isSidebarOpen} />;
       default:
-        return null;
+        return <Welcome isSidebarOpen={isSidebarOpen} />;
     }
   };
 

@@ -1,9 +1,9 @@
 import  { useState } from 'react';
 import { DragDropContext, DropResult } from '@hello-pangea/dnd';
-import Column from './Column/Column';
 
-import * as S from './Board.styles';
 import { initialData } from '../../constants/initial-data';
+import Column from './Column/Column';
+import * as S from './Board.styles';
 
 const Board = ({ isSidebarOpen }: DynamicContentProps) => {
   const [columns, setColumns] = useState(initialData);

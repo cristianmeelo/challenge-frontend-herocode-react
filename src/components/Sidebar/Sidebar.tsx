@@ -5,13 +5,9 @@ import Timeline from '../Icons/Timeline/Timeline';
 import Event from '../Icons/Event/Event';
 import Calendar from '../Icons/Calendar/Calendar';
 import Arrow from './Arrow/Arrow';
-
-
 import * as S from './Sidebar.styles';
 
 const Sidebar = ({ isSidebarOpen, toggleSidebar, selectedItem,handleItemClicked }: SidebarProps) => {
-
-
 
   return (
     <S.Sidebar isSidebarOpen={isSidebarOpen}>
