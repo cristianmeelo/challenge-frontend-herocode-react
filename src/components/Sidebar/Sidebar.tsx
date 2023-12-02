@@ -1,10 +1,13 @@
 import { useState } from 'react';
+
 import Logo from '../Logo/Logo';
 import SidebarItem from '../SidebarItem/SidebarItem';
 import Dashboard from '../Icons/Dashboard/Dashboard';
 import Timeline from '../Icons/Timeline/Timeline';
 import Event from '../Icons/Event/Event';
 import Calendar from '../Icons/Calendar/Calendar';
+import Arrow from './Arrow/Arrow';
+
 
 import * as S from './Sidebar.styles';
 
@@ -17,7 +20,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
 
   return (
     <S.Sidebar isSidebarOpen={isSidebarOpen}>
-      <S.Logo onClick={toggleSidebar} isSidebarOpen={isSidebarOpen}>
+      <S.Logo  isSidebarOpen={isSidebarOpen}>
         <Logo />
       </S.Logo>
 
@@ -27,6 +30,11 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
         <SidebarItem icon={<Timeline />} label="timeline" isSelected={selectedItem === 'timeline'} onItemClicked={handleItemClicked} />
         <SidebarItem icon={<Calendar />} label="calendário" isSelected={selectedItem === 'calendário'} onItemClicked={handleItemClicked} />
       </S.Items>
+
+      <S.ArrowContainer isSidebarOpen={isSidebarOpen} onClick={toggleSidebar}>
+        <Arrow isSidebarOpen={isSidebarOpen}/>
+      </S.ArrowContainer>
+
     </S.Sidebar>
   );
 };
