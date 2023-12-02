@@ -7,4 +7,13 @@ interface Task {
 interface TaskProps {
   task: Task;
   index: number;
+  column: string;
 }
+
+interface StyledTask {
+  isDoneColumn: boolean;
+}
+
+
+
+
