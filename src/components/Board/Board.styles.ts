@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.main<BoardProps>`
+export const Container = styled.main<DynamicContentProps>`
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
