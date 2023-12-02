@@ -7,11 +7,10 @@ import Calendar from '../Icons/Calendar/Calendar';
 import Arrow from './Arrow/Arrow';
 import * as S from './Sidebar.styles';
 
-const Sidebar = ({ isSidebarOpen, toggleSidebar, selectedItem,handleItemClicked }: SidebarProps) => {
-
+const Sidebar = ({ isSidebarOpen, toggleSidebar, selectedItem, handleItemClicked }: SidebarProps) => {
   return (
     <S.Sidebar isSidebarOpen={isSidebarOpen}>
-      <S.Logo  isSidebarOpen={isSidebarOpen}>
+      <S.Logo isSidebarOpen={isSidebarOpen}>
         <Logo />
       </S.Logo>
 
@@ -23,9 +22,8 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar, selectedItem,handleItemClicked 
       </S.Items>
 
       <S.ArrowContainer isSidebarOpen={isSidebarOpen} onClick={toggleSidebar}>
-        <Arrow isSidebarOpen={isSidebarOpen}/>
+        <Arrow isSidebarOpen={isSidebarOpen} />
       </S.ArrowContainer>
-
     </S.Sidebar>
   );
 };

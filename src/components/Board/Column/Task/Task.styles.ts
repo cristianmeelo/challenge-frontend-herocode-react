@@ -14,7 +14,6 @@ export const TaskTitle = styled.h1<StyledTask>`
   font-weight: 500;
   color: ${(props) => (props.isDoneColumn ? props.theme.colors.neutral.gray_400 : props.theme.colors.neutral.gray_400)};
   opacity: ${(props) => (props.isDoneColumn ? 0.6 : 1)};
-
 `;
 export const TaskContent = styled.p`
   padding: 0.9375rem 0 1.3125rem 0;

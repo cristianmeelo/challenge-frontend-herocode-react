@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { DragDropContext, DropResult } from '@hello-pangea/dnd';
 
 import { initialData } from '../../constants/initial-data';

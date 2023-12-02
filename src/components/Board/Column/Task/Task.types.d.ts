@@ -13,7 +13,3 @@ interface TaskProps {
 interface StyledTask {
   isDoneColumn: boolean;
 }
-
-
-
-

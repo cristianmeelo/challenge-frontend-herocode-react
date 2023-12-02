@@ -12,7 +12,6 @@ export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
 
-
   const toggleSidebar: VoidFunction = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -39,7 +38,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} selectedItem={selectedItem} handleItemClicked={handleItemClicked}/>
+      <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} selectedItem={selectedItem} handleItemClicked={handleItemClicked} />
       <DynamicContent selectedLabel={selectedItem} />
     </>
   );

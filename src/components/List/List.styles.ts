@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.main<DynamicContentProps>`
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -10,4 +10,3 @@ export const Container = styled.main<DynamicContentProps>`
   padding-top: 5.625rem;
   background-color: ${(props) => props.theme.colors.primary.purple_200};
 `;
-

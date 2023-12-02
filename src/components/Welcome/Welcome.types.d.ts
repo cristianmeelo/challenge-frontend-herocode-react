@@ -1,4 +1,4 @@
- interface Feature {
-    icon: string;
-    text: string;
-  }
+interface Feature {
+  icon: string;
+  text: string;
+}

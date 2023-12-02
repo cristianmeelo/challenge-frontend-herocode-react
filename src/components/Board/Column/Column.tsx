@@ -9,7 +9,7 @@ const Column: React.FC<ColumnProps> = ({ column }) => (
       <S.Column {...provided.droppableProps} ref={provided.innerRef}>
         <S.ColumnTitle>{column.title}</S.ColumnTitle>
         {column.tasks.map((task: Task, index: number) => (
-          <Task key={task.id} task={task} index={index} column={column.id}/>
+          <Task key={task.id} task={task} index={index} column={column.id} />
         ))}
         {provided.placeholder}
       </S.Column>
