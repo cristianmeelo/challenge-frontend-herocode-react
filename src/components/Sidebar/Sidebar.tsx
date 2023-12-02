@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import Logo from '../Logo/Logo';
 import SidebarItem from '../SidebarItem/SidebarItem';
 import Dashboard from '../Icons/Dashboard/Dashboard';
@@ -11,12 +9,9 @@ import Arrow from './Arrow/Arrow';
 
 import * as S from './Sidebar.styles';
 
-const Sidebar = ({ isSidebarOpen, toggleSidebar }: SidebarProps) => {
-  const [selectedItem, setSelectedItem] = useState<string | null>(null);
+const Sidebar = ({ isSidebarOpen, toggleSidebar, selectedItem,handleItemClicked }: SidebarProps) => {
 
-  const handleItemClicked = (label: string): void => {
-    setSelectedItem(label);
-  };
+
 
   return (
     <S.Sidebar isSidebarOpen={isSidebarOpen}>

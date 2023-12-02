@@ -1,6 +1,3 @@
-interface BoardProps {
-  isSidebarOpen: boolean;
-}
 
 interface Column {
   id: string;

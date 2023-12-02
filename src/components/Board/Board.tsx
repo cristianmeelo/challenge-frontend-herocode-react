@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { DragDropContext, DropResult } from '@hello-pangea/dnd';
 import Column from './Column/Column';
 
 import * as S from './Board.styles';
 import { initialData } from '../../constants/initial-data';
 
-const Board: React.FC<BoardProps> = ({ isSidebarOpen }) => {
+const Board = ({ isSidebarOpen }: DynamicContentProps) => {
   const [columns, setColumns] = useState(initialData);
 
   const onDragEnd = (result: DropResult) => {
