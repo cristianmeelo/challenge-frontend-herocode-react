@@ -2,6 +2,8 @@ interface Task {
   id: string;
   title: string;
   content: string;
+  completionDate: Date | string | null;
+  priority: TaskPriority;
 }
 
 interface TaskProps {
@@ -13,3 +15,5 @@ interface TaskProps {
 interface StyledTask {
   isDoneColumn: boolean;
 }
+
+type TaskPriority = 'Low' | 'Medium' | 'High';

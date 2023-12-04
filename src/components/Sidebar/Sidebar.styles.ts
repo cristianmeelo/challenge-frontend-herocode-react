@@ -32,7 +32,8 @@ export const ArrowContainer = styled.div<StyledSidebar>`
   bottom: 2rem;
   left: ${(props) => (props.isSidebarOpen ? '17.75rem' : '0.8rem')};
   width: ${(props) => (props.isSidebarOpen ? 'calc(100% - 17.75rem)' : 'calc(100% - 0.8rem)')};
-  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+  transition:
+    left 0.3s ease-in-out,
+    width 0.3s ease-in-out;
   cursor: pointer;
 `;
-
