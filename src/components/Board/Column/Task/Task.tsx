@@ -5,7 +5,7 @@ import TaskTitle from './TaskTitle/TaskTitle';
 import TaskContent from './TaskContent/TaskContent';
 import * as S from './Task.styles';
 
-const Task: React.FC<TaskProps> = ({ task, index, column }) => (
+const Task = ({ task, index, column }: TaskProps) => (
   <Draggable key={task.id} draggableId={task.id} index={index}>
     {(provided: DraggableProvided) => (
       <S.Task ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>

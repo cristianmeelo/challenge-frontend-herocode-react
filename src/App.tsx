@@ -20,7 +20,7 @@ export default function App() {
     setSelectedItem(label);
   };
 
-  const DynamicContent: React.FC<{ selectedLabel: string | null }> = ({ selectedLabel }) => {
+  const DynamicContent = ({ selectedLabel }: { selectedLabel: string | null }) => {
     switch (selectedLabel) {
       case 'quadro':
         return <Board isSidebarOpen={isSidebarOpen} />;
@@ -31,7 +31,7 @@ export default function App() {
       case 'calendário':
         return <Calendar isSidebarOpen={isSidebarOpen} />;
       default:
-        return <Welcome isSidebarOpen={isSidebarOpen} />;
+        return <Welcome />;
     }
   };
 

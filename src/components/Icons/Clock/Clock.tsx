@@ -1,6 +1,6 @@
 import { useTheme } from '@emotion/react';
 
-export const Clock = ({ isOverdue }: IconProps) => {
+const Clock = ({ isOverdue }: IconProps) => {
   const theme = useTheme();
 
   return (
@@ -13,3 +13,4 @@ export const Clock = ({ isOverdue }: IconProps) => {
     </svg>
   );
 };
+export default Clock;

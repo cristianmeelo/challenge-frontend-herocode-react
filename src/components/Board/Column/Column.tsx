@@ -1,9 +1,8 @@
-import React from 'react';
 import { Droppable, DroppableProvided } from '@hello-pangea/dnd';
 import Task from './Task/Task';
 import * as S from './Column.styles';
 
-const Column: React.FC<ColumnProps> = ({ column }) => (
+const Column = ({ column }: ColumnProps) => (
   <Droppable key={column.id} droppableId={column.id}>
     {(provided: DroppableProvided) => (
       <S.Column {...provided.droppableProps} ref={provided.innerRef}>
