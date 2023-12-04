@@ -7,6 +7,7 @@ import Timeline from './components/Timeline/Timeline';
 import Calendar from './components/Calendar/Calendar';
 import List from './components/List/List';
 import Welcome from './components/Welcome/Welcome';
+import Modal from './components/Modal/Modal';
 
 export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -40,6 +41,7 @@ export default function App() {
       <Header />
       <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} selectedItem={selectedItem} handleItemClicked={handleItemClicked} />
       <DynamicContent selectedLabel={selectedItem} />
+      <Modal />
     </>
   );
 }

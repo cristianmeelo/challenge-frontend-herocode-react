@@ -20,6 +20,13 @@ interface ButtonProps {
    * @member {ButtonShapes}
    */
   shape: ButtonShapes;
+
+  /**
+   * The color style of the button.
+   * @member {ButtonsColors}
+   * @default 'primary'
+   */
+  color?: ButtonsColors;
 }
 
 /**
@@ -33,3 +40,17 @@ type ButtonVariants = 'contained' | 'outlined';
  * @type {('square' | 'rounded')}
  */
 type ButtonShapes = 'square' | 'rounded';
+
+/**
+ * Represents the possible colors for the button.
+ * @type {('secondary' | 'success' | 'error')}
+ */
+type ButtonsColors = 'secondary' | 'success' | 'error';
+
+/**
+ * An example of how to use the Button component.
+ * @example
+ * <Button variant="contained" shape="rounded" color="success">
+ *   Submit
+ * </Button>
+ */

@@ -13,7 +13,7 @@ export const Button = styled.button<ButtonProps>`
   ${({ shape }) => shape === 'rounded' && `border-radius: 20px;`}
   ${({ shape }) => shape === 'square' && `border-radius: 0.625rem;`}
 
-  ${({ variant, theme }) =>
+  ${({ variant, theme, color }) =>
     variant === 'contained'
       ? `
       background-color: ${theme.colors.primary.purple_400};
@@ -26,11 +26,23 @@ export const Button = styled.button<ButtonProps>`
       }
     `
       : `
+      padding: 0.625rem 4.25rem;
       background-color: transparent;
-      color: #3498db;
+      border: 1px solid ${
+        color === 'error'
+          ? theme.colors.semantic.error.red_200
+          : color === 'success'
+            ? theme.colors.semantic.success.green_400
+            : theme.colors.primary.purple_600
+      } ;
+      color: ${
+        color === 'error' ? theme.colors.semantic.error.red_200 : color === 'success' ? theme.colors.semantic.success.green_400 : theme.colors.neutral.white_000
+      } ;
+      background-color: ${color === 'error' ? 'transparent' : color === 'success' ? 'transparent' : theme.colors.primary.purple_600} ;
+      
       &:hover {
-        background-color: #3498db;
-        color: #fff;
+        background-color: ${theme.colors.primary.purple_400};
+        color: ${theme.colors.primary.purple_600};
       }
     `}
 `;
