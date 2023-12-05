@@ -1,14 +1,16 @@
 import styled from '@emotion/styled';
 
-interface TaskPriorityProps {
-  priority: 'Low' | 'Medium' | 'High';
-}
 
 export const Priority = styled.span<TaskPriorityProps>`
+  display: flex;
+  align-items: center;
+  width: min-content;
+  height: min-content;
   border-radius: 1.25rem;
-  padding: 0.25rem 0.875rem;
+  padding: 0.3125rem 0.9375rem;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
   ${({ priority, theme }) => {
     switch (priority) {
       case 'Low':

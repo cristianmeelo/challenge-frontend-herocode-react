@@ -1,17 +1,23 @@
 import styled from '@emotion/styled';
 
 export const Button = styled.button<ButtonProps>`
-  padding: 1.125rem 1.375rem;
-  font-size: 1.125rem;
-  cursor: pointer;
-  border-style: none;
-  transition:
-    background-color 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  padding: 18px 22px;
+  font-size: 18px;
 
-  ${({ shape }) => shape === 'rounded' && `border-radius: 20px;`}
-  ${({ shape }) => shape === 'square' && `border-radius: 0.625rem;`}
+  ${({ shape }) => shape === 'rounded' && `border-radius: 20px; min-width: 180px;`}
+  ${({ shape }) => shape === 'square' && `border-radius: 0.625rem; width: 200px;`}
+  
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  border-style: none;
+  cursor: pointer;
+  
+
+  @media (max-width: 768px) {
+    padding: 10px 10px;
+    font-size: 16px;
+    ${({ shape }) => shape === 'rounded' && `border-radius: 20px; min-width: 100%;`}
+
+  }
 
   ${({ variant, theme, color }) =>
     variant === 'contained'
@@ -21,8 +27,7 @@ export const Button = styled.button<ButtonProps>`
 
       &:hover {
         background-color: ${theme.colors.primary.purple_200};
-      color: ${theme.colors.primary.purple_600};
-
+        color: ${theme.colors.primary.purple_600};
       }
     `
       : `
@@ -46,3 +51,4 @@ export const Button = styled.button<ButtonProps>`
       }
     `}
 `;
+

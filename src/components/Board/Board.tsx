@@ -1,13 +1,8 @@
-import { useState } from 'react';
 import { DragDropContext, DropResult } from '@hello-pangea/dnd';
-
-import { initialData } from '../../constants/initial-data';
 import Column from './Column/Column';
 import * as S from './Board.styles';
 
-const Board = ({ isSidebarOpen }: DynamicContentProps) => {
-  const [columns, setColumns] = useState(initialData);
-
+const Board = ({ isSidebarOpen, columns, setColumns }: BoardProps) => {
   const onDragEnd = (result: DropResult) => {
     const { source, destination, draggableId } = result;
     if (!destination) return;

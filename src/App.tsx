@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import { initialData } from './constants/initial-data';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Board from './components/Board/Board';
@@ -13,6 +14,7 @@ import useSidebar from './hooks/useSidebar/useSidebar';
 
 export default function App() {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
+  const [columns, setColumns] = useState<Column[]>(initialData);
   const { isOpen, toggleModalStatus } = useModal();
   const { isSidebarOpen, toggleSidebar } = useSidebar();
 
@@ -23,7 +25,7 @@ export default function App() {
   const DynamicContent = ({ selectedLabel }: { selectedLabel: string | null }) => {
     switch (selectedLabel) {
       case 'quadro':
-        return <Board isSidebarOpen={isSidebarOpen} />;
+        return <Board isSidebarOpen={isSidebarOpen} columns={columns} setColumns={setColumns} />;
       case 'lista':
         return <List isSidebarOpen={isSidebarOpen} />;
       case 'timeline':
@@ -40,7 +42,7 @@ export default function App() {
       <Header toggleModalStatus={toggleModalStatus} />
       <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} selectedItem={selectedItem} handleItemClicked={handleItemClicked} />
       <DynamicContent selectedLabel={selectedItem} />
-      <Modal isOpen={isOpen} toggleModalStatus={toggleModalStatus} />
+      <Modal isOpen={isOpen} toggleModalStatus={toggleModalStatus} columns={columns} setColumns={setColumns} />
     </>
   );
 }

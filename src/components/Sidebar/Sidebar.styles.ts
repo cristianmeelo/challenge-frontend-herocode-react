@@ -11,6 +11,7 @@ export const Sidebar = styled.aside<StyledSidebar>`
   background-color: ${(props) => props.theme.colors.neutral.white_000};
   transition: width 0.3s ease-in-out;
   box-shadow: 4px 0 30px 10px rgba(0, 0, 0, 0.05);
+  z-index: +20;
 `;
 
 export const Logo = styled.div<StyledSidebar>`
