@@ -1,10 +1,10 @@
 import Button from '../Button/Button';
 import * as S from './Header.styles';
 
-const Header = () => {
+const Header = ({ toggleModalStatus }: { toggleModalStatus: () => void }) => {
   return (
     <S.Header>
-      <Button variant={'contained'} shape={'square'}>
+      <Button variant={'contained'} shape={'square'} onClick={toggleModalStatus}>
         + Novo Card
       </Button>
     </S.Header>

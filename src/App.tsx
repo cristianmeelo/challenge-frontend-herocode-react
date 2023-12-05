@@ -8,14 +8,13 @@ import Calendar from './components/Calendar/Calendar';
 import List from './components/List/List';
 import Welcome from './components/Welcome/Welcome';
 import Modal from './components/Modal/Modal';
+import useModal from './hooks/useModal/useModal';
+import useSidebar from './hooks/useSidebar/useSidebar';
 
 export default function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
-
-  const toggleSidebar: VoidFunction = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  const { isOpen, toggleModalStatus } = useModal();
+  const { isSidebarOpen, toggleSidebar } = useSidebar();
 
   const handleItemClicked = (label: string): void => {
     setSelectedItem(label);
@@ -38,10 +37,10 @@ export default function App() {
 
   return (
     <>
-      <Header />
+      <Header toggleModalStatus={toggleModalStatus} />
       <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} selectedItem={selectedItem} handleItemClicked={handleItemClicked} />
       <DynamicContent selectedLabel={selectedItem} />
-      <Modal />
+      <Modal isOpen={isOpen} toggleModalStatus={toggleModalStatus} />
     </>
   );
 }

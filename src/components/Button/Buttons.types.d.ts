@@ -2,7 +2,7 @@
  * Represents the properties for a button component.
  * @interface
  */
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The content of the button, typically provided as React nodes.
    * @member {React.ReactNode}
