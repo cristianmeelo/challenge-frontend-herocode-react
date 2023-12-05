@@ -11,6 +11,7 @@ declare module '@emotion/react' {
       neutral: {
         white_000: string;
         gray_100: string;
+        gray_300: string;
         gray_400: string;
       };
       semantic: {

@@ -8,16 +8,16 @@ export const Container = styled.div`
 
 export const Label = styled.label`
   position: relative;
-  font-size: 0.875rem;
-  color: #495057;
-  background-color: #fff;
-  z-index: +999;
-  pointer-events: none;
   width: fit-content;
   top: 6px;
   left: 10px;
-  font-weight: 400;
+  color: ${(props)=> props.theme.colors.neutral.gray_400};
+  background-color: ${(props)=> props.theme.colors.neutral.white_000};
+  font-size: 0.875rem;
   font-size: 11px;
+  font-weight: 400;
+  z-index: +999;
+  pointer-events: none;
 `;
 
 export const TextFieldContainer = styled.div`
@@ -27,16 +27,12 @@ export const TextFieldContainer = styled.div`
 `;
 
 export const TextField = styled.input`
-  border-radius: 4px;
-  border: 1px solid #ced4da;
-  padding: 10px;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid ${(props)=> props.theme.colors.neutral.gray_300};
 
-  &:focus {
-    border-color: #1976d2;
-    box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
-  }
 
   &::-webkit-calendar-picker-indicator {
     display: none;

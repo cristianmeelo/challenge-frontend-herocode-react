@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
-
 export const Priority = styled.span<TaskPriorityProps>`
   display: flex;
   align-items: center;
+  position: relative; 
   width: min-content;
   height: min-content;
   border-radius: 1.25rem;
@@ -11,14 +11,21 @@ export const Priority = styled.span<TaskPriorityProps>`
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
+
+  &::before {
+    content: '${props => props.isSelected ? '🎯' : ''}';
+    display: ${props => props.isSelected ? 'inline-block' : 'none'};
+    position: absolute;
+    top: -5px;
+    left: 0;
+  }
+
   ${({ priority, theme }) => {
     switch (priority) {
       case 'Low':
         return `
           color: ${theme.colors.semantic.success.green_400};
           border: 1px solid ${theme.colors.semantic.success.green_400};
-
-
         `;
       case 'Medium':
         return `

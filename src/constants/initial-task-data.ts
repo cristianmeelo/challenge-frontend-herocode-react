@@ -1,4 +1,4 @@
-export const initialData: Column[] = [
+export const initialTaskData: Column[] = [
   {
     id: 'todo',
     title: 'To do',
@@ -7,21 +7,21 @@ export const initialData: Column[] = [
         id: '1',
         title: 'Testar Navegadores',
         content: 'Verificar e garantir a compatibilidade da aplicação em diferentes navegadores.',
-        completionDate: new Date('2023-11-25'),
+        completionDate: '2023-11-25',
         priority: 'High',
       },
       {
         id: '2',
         title: 'Atualizar Bibliotecas',
         content: 'Manter as libs atualizadas para garantir segurança e aproveitar novos recursos',
-        completionDate: new Date('2023-12-25'),
+        completionDate: '2023-12-25',
         priority: 'Low',
       },
       {
         id: '3',
         title: 'Implementar Animações',
         content: 'Adicionar efeitos visuais e transições para melhorar a experiência do usuário.',
-        completionDate: new Date('2023-12-25'),
+        completionDate: '2023-12-25',
         priority: 'Medium',
       },
     ],
@@ -34,7 +34,7 @@ export const initialData: Column[] = [
         id: '4',
         title: 'Atualizar Bibliotecas',
         content: 'Manter as libs atualizadas para garantir segurança e aproveitar novos recursos',
-        completionDate: new Date('2023-12-25'),
+        completionDate: '2023-12-25',
         priority: 'Medium',
       },
     ],
@@ -47,7 +47,7 @@ export const initialData: Column[] = [
         id: '5',
         title: 'Atualizar Bibliotecas',
         content: 'Manter as libs atualizadas para garantir segurança e aproveitar novos recursos',
-        completionDate: new Date('2023-12-25'),
+        completionDate: '2023-12-25',
         priority: 'High',
       },
     ],
@@ -56,7 +56,7 @@ export const initialData: Column[] = [
     id: 'done',
     title: 'Done',
     tasks: [
-      { id: '6', title: 'Final Project: App development', content: 'Business Web Development', completionDate: new Date('2023-12-25'), priority: 'High' },
+      { id: '6', title: 'Final Project: App development', content: 'Business Web Development', completionDate: '2023-12-25', priority: 'High' },
     ],
   },
 ];

@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { initialTaskData } from './constants/initial-task-data';
 
-import { initialData } from './constants/initial-data';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Board from './components/Board/Board';
@@ -14,7 +14,7 @@ import useSidebar from './hooks/useSidebar/useSidebar';
 
 export default function App() {
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
-  const [columns, setColumns] = useState<Column[]>(initialData);
+  const [columns, setColumns] = useState<Column[]>(initialTaskData);
   const { isOpen, toggleModalStatus } = useModal();
   const { isSidebarOpen, toggleSidebar } = useSidebar();
 

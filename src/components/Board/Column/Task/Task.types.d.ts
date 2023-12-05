@@ -22,10 +22,10 @@ interface Task {
   content: string;
 
   /**
-   * The completion date of the task, represented as a Date object, string, or null if not completed.
-   * @member {Date | string | null}
+   * The completion date of the task, represented as a string object.
+   * @member {string}
    */
-  completionDate: Date | string | null;
+  completionDate:  string ;
 
   /**
    * The priority level of the task.

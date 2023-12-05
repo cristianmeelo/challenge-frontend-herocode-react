@@ -10,6 +10,7 @@ const theme = {
     neutral: {
       white_000: '#FFFFFF',
       gray_100: '#F2F2F2',
+      gray_300: '#C4C4C4',
       gray_400: '#6F6F6F',
     },
     semantic: {

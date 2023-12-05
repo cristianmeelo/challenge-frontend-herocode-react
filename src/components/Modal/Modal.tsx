@@ -110,7 +110,7 @@ const Modal = ({ isOpen, toggleModalStatus, columns,setColumns }: ModalProps) =>
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 icon={<PickData />}
-                value={taskData.completionDate}
+                value={taskData.completionDate ?? ''}
                 onChange={handleInputChange}
               />
               </S.ColCompletionDate>
@@ -118,9 +118,9 @@ const Modal = ({ isOpen, toggleModalStatus, columns,setColumns }: ModalProps) =>
               <S.ColPriority>
               <S.Label>Prioridade</S.Label>
                 <S.RowPriority>
-                <Priority priority="High" onClick={() => handlePriorityClick('High')} />
-                    <Priority priority="Medium" onClick={() => handlePriorityClick('Medium')} />
-                    <Priority priority="Low" onClick={() => handlePriorityClick('Low')} />
+                    <Priority priority="High" onClick={() => handlePriorityClick('High')} isSelected={taskData.priority === 'High'} />
+                    <Priority priority="Medium" onClick={() => handlePriorityClick('Medium')} isSelected={taskData.priority === 'Medium'} />
+                    <Priority priority="Low" onClick={() => handlePriorityClick('Low')} isSelected={taskData.priority === 'Low'} />
                 </S.RowPriority>
               </S.ColPriority>
               </S.Row>

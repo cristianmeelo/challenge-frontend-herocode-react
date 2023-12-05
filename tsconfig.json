@@ -15,6 +15,7 @@
     "noImplicitAny": true,
     "baseUrl": ".",
     "jsx": "react-jsx",
+    "removeComments": true,
 
     /* Linting */
     "strict": true,
