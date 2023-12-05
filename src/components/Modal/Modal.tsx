@@ -1,15 +1,14 @@
 import { useState } from 'react';
 
 import generateRandomTaskId from '../../functions/generateRandomTaskId/generateRandomTaskId';
-import  Priority  from '../Board/Column/Task/TaskPriority/TaskPriority';
+import Priority from '../Board/Column/Task/TaskPriority/TaskPriority';
 import Button from '../Button/Button';
 import TextArea from '../TextArea/TextArea';
 import TextField from '../TextField/TextField';
 import PickData from '../Icons/PickData/PickData';
 import * as S from './Modal.styles';
 
-
-const Modal = ({ isOpen, toggleModalStatus, columns,setColumns }: ModalProps) => {
+const Modal = ({ isOpen, toggleModalStatus, columns, setColumns }: ModalProps) => {
   const [isFocused, setIsFocused] = useState(false);
   const [taskData, setTaskData] = useState<Task>({
     id: generateRandomTaskId(),
@@ -18,7 +17,6 @@ const Modal = ({ isOpen, toggleModalStatus, columns,setColumns }: ModalProps) =>
     completionDate: '',
     priority: 'Low',
   });
-
 
   const handleFocus = () => {
     setIsFocused(true);
@@ -63,7 +61,6 @@ const Modal = ({ isOpen, toggleModalStatus, columns,setColumns }: ModalProps) =>
     const updatedColumns = addTaskToColumn(columns, 'todo', newTask);
     setColumns(updatedColumns);
 
-
     setTaskData({
       id: generateRandomTaskId(),
       title: '',
@@ -79,52 +76,44 @@ const Modal = ({ isOpen, toggleModalStatus, columns,setColumns }: ModalProps) =>
     <div>
       {isOpen && (
         <>
-          <S.Overlay onClick={toggleModalStatus}/>
+          <S.Overlay onClick={toggleModalStatus} />
           <S.ModalContainer>
             <S.ModalTitle>novo card</S.ModalTitle>
             <S.ModalInputs>
               <TextField
                 type="text"
-                name='title'
+                name="title"
                 label="Título da Task"
                 placeholder="Digite aqui o título da task"
                 value={taskData.title}
                 onChange={handleInputChange}
               />
-              <TextArea
-                name="content"
-                label="Descrição"
-                placeholder="Digite a descrição"
-                value={taskData.content}
-                onChange={handleInputChange}
-              />
+              <TextArea name="content" label="Descrição" placeholder="Digite a descrição" value={taskData.content} onChange={handleInputChange} />
 
               <S.Row>
-                <S.ColCompletionDate >
+                <S.ColCompletionDate>
+                  <TextField
+                    type={isFocused ? 'date' : 'text'}
+                    name="completionDate"
+                    label="Data final"
+                    placeholder="Selecione a data de entrega"
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                    icon={<PickData />}
+                    value={taskData.completionDate ?? ''}
+                    onChange={handleInputChange}
+                  />
+                </S.ColCompletionDate>
 
-              <TextField
-                type={isFocused ? 'date' : 'text'}
-                name="completionDate"
-                label="Data final"
-                placeholder="Selecione a data de entrega"
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                icon={<PickData />}
-                value={taskData.completionDate ?? ''}
-                onChange={handleInputChange}
-              />
-              </S.ColCompletionDate>
-
-              <S.ColPriority>
-              <S.Label>Prioridade</S.Label>
-                <S.RowPriority>
+                <S.ColPriority>
+                  <S.Label>Prioridade</S.Label>
+                  <S.RowPriority>
                     <Priority priority="High" onClick={() => handlePriorityClick('High')} isSelected={taskData.priority === 'High'} />
                     <Priority priority="Medium" onClick={() => handlePriorityClick('Medium')} isSelected={taskData.priority === 'Medium'} />
                     <Priority priority="Low" onClick={() => handlePriorityClick('Low')} isSelected={taskData.priority === 'Low'} />
-                </S.RowPriority>
-              </S.ColPriority>
+                  </S.RowPriority>
+                </S.ColPriority>
               </S.Row>
-
             </S.ModalInputs>
             <S.ModalActions>
               <Button shape="rounded" variant="outlined" color="error" onClick={toggleModalStatus}>

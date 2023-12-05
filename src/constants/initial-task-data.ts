@@ -55,8 +55,6 @@ export const initialTaskData: Column[] = [
   {
     id: 'done',
     title: 'Done',
-    tasks: [
-      { id: '6', title: 'Final Project: App development', content: 'Business Web Development', completionDate: '2023-12-25', priority: 'High' },
-    ],
+    tasks: [{ id: '6', title: 'Final Project: App development', content: 'Business Web Development', completionDate: '2023-12-25', priority: 'High' }],
   },
 ];

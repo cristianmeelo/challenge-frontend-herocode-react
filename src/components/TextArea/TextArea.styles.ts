@@ -6,12 +6,12 @@ export const Container = styled.div`
 `;
 
 export const Label = styled.label`
-   position: relative;
+  position: relative;
   width: fit-content;
   top: 6px;
   left: 10px;
-  color: ${(props)=> props.theme.colors.neutral.gray_400};
-  background-color: ${(props)=> props.theme.colors.neutral.white_000};
+  color: ${(props) => props.theme.colors.neutral.gray_400};
+  background-color: ${(props) => props.theme.colors.neutral.white_000};
   font-size: 0.875rem;
   font-size: 11px;
   font-weight: 400;
@@ -25,7 +25,5 @@ export const TextArea = styled.textarea`
   width: 100%;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid ${(props)=> props.theme.colors.neutral.gray_300};
-
-
+  border: 1px solid ${(props) => props.theme.colors.neutral.gray_300};
 `;

@@ -25,7 +25,7 @@ interface Task {
    * The completion date of the task, represented as a string object.
    * @member {string}
    */
-  completionDate:  string ;
+  completionDate: string;
 
   /**
    * The priority level of the task.

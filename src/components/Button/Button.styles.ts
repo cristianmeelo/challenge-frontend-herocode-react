@@ -10,13 +10,11 @@ export const Button = styled.button<ButtonProps>`
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   border-style: none;
   cursor: pointer;
-  
 
   @media (max-width: 768px) {
     padding: 10px 10px;
     font-size: 16px;
     ${({ shape }) => shape === 'rounded' && `border-radius: 20px; min-width: 100%;`}
-
   }
 
   ${({ variant, theme, color }) =>
@@ -51,4 +49,3 @@ export const Button = styled.button<ButtonProps>`
       }
     `}
 `;
-

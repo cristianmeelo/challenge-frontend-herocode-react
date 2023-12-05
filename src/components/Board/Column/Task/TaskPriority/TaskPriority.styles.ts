@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Priority = styled.span<TaskPriorityProps>`
   display: flex;
   align-items: center;
-  position: relative; 
+  position: relative;
   width: min-content;
   height: min-content;
   border-radius: 1.25rem;
@@ -13,8 +13,8 @@ export const Priority = styled.span<TaskPriorityProps>`
   cursor: pointer;
 
   &::before {
-    content: '${props => props.isSelected ? '🎯' : ''}';
-    display: ${props => props.isSelected ? 'inline-block' : 'none'};
+    content: '${(props) => (props.isSelected ? '🎯' : '')}';
+    display: ${(props) => (props.isSelected ? 'inline-block' : 'none')};
     position: absolute;
     top: -5px;
     left: 0;
