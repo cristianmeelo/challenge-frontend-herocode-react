@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import generateRandomTaskId from '../../functions/generateRandomTaskId/generateRandomTaskId';
 import Priority from '../Board/Column/Task/TaskPriority/TaskPriority';
@@ -50,6 +53,13 @@ const Modal = ({ isOpen, toggleModalStatus, columns, setColumns }: ModalProps) =
   };
 
   const handleSubmit = () => {
+    // Verificar se todos os campos estão preenchidos
+    if (!taskData.title || !taskData.content || !taskData.completionDate || !taskData.priority) {
+      // Se algum campo estiver vazio, exibir toast de aviso
+      notifyError('Preencha todos os campos!');
+      return;
+    }
+
     const newTask: Task = {
       id: taskData.id,
       title: taskData.title,
@@ -70,7 +80,35 @@ const Modal = ({ isOpen, toggleModalStatus, columns, setColumns }: ModalProps) =
     });
 
     toggleModalStatus();
+    notifySuccess('Task adicionada com sucesso!');
   };
+
+  const notifySuccess = (message: string) => {
+    toast.success(message, {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
+    const notifyError = (message: string) => {
+      toast.error(message, {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    };
+
 
   return (
     <div>
@@ -123,9 +161,12 @@ const Modal = ({ isOpen, toggleModalStatus, columns, setColumns }: ModalProps) =
                 CRIAR
               </Button>
             </S.ModalActions>
+
+
           </S.ModalContainer>
         </>
       )}
+      <ToastContainer />
     </div>
   );
 };
