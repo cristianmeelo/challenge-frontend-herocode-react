@@ -1,6 +1,6 @@
 import { atom, RecoilState } from 'recoil';
 
- const initialTaskState: RecoilState<Column[]> = atom({
+const initialTaskState: RecoilState<Column[]> = atom({
   key: 'initialTaskState',
   default: [
     {
@@ -61,7 +61,7 @@ import { atom, RecoilState } from 'recoil';
       title: 'Done',
       tasks: [{ id: '6', title: 'Final Project: App development', content: 'Business Web Development', completionDate: '2023-12-25', priority: 'High' }],
     },
-  ] as Column[]
+  ] as Column[],
 });
 
 export default initialTaskState;

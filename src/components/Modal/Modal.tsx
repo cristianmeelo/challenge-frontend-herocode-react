@@ -3,9 +3,8 @@ import { useRecoilState } from 'recoil';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 import generateRandomTaskId from '../../functions/generateRandomTaskId/generateRandomTaskId';
-import  initialTaskState  from '../../context/atoms/initialTaskState';
+import initialTaskState from '../../context/atoms/initialTaskState';
 import modalState from '../../context/atoms/modalState';
 
 import Priority from '../Board/Column/Task/TaskPriority/TaskPriority';
@@ -90,34 +89,33 @@ const Modal = () => {
 
   const notifySuccess = (message: string) => {
     toast.success(message, {
-      position: "bottom-right",
+      position: 'bottom-right',
       autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "colored",
+      theme: 'colored',
     });
   };
 
-    const notifyError = (message: string) => {
-      toast.error(message, {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-    };
+  const notifyError = (message: string) => {
+    toast.error(message, {
+      position: 'bottom-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'colored',
+    });
+  };
 
-    const toggleModalStatus= ()=> {
-      setIsModalOpen(!isModalOpen)
-    }
-
+  const toggleModalStatus = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
   return (
     <div>
@@ -170,8 +168,6 @@ const Modal = () => {
                 CRIAR
               </Button>
             </S.ModalActions>
-
-
           </S.ModalContainer>
         </>
       )}

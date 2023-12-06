@@ -1,4 +1,4 @@
-import { useRecoilState,  } from 'recoil';
+import { useRecoilState } from 'recoil';
 import sidebarState from '../../context/atoms/sidebarState';
 import selectedSidebarOptionState from '../../context/atoms/selectedSidebarOptionState';
 
@@ -16,10 +16,10 @@ const Sidebar = () => {
   const [selectedItem, setSelectedItem] = useRecoilState(selectedSidebarOptionState);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen)
-  }
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
-    const handleItemClicked = (item: string): void => {
+  const handleItemClicked = (item: string): void => {
     setSelectedItem(item);
   };
 

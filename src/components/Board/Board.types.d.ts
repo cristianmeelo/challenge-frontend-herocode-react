@@ -26,9 +26,7 @@ interface Column {
  * Represents the props for the Board component.
  * @interface
  */
-interface BoardProps extends DynamicContentProps {
-
-}
+interface BoardProps extends DynamicContentProps {}
 
 /**
  * Represents the props for the components that dynamically switch content based on user selection.

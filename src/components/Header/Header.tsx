@@ -6,9 +6,9 @@ import * as S from './Header.styles';
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useRecoilState<boolean>(modalState);
 
-  const toggleModalStatus= ()=> {
-    setIsModalOpen(!isModalOpen)
-  }
+  const toggleModalStatus = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
   return (
     <S.Header>

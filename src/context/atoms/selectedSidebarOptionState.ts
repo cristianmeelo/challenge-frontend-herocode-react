@@ -1,9 +1,8 @@
-import { atom } from "recoil";
+import { atom } from 'recoil';
 
-const selectedSidebarOptionState = atom<string|null>({
-    key: 'selectedSidebarOptionState', 
-    default: null, 
-  });
+const selectedSidebarOptionState = atom<string | null>({
+  key: 'selectedSidebarOptionState',
+  default: null,
+});
 
-  export default selectedSidebarOptionState
-
+export default selectedSidebarOptionState;
