@@ -1,7 +1,7 @@
 import { useRecoilState } from 'recoil';
 
-import sidebarState from '@/context/atoms/sidebarState';
 import selectedSidebarOptionState from '@/context/atoms/selectedSidebarOptionState';
+import useControlSidebarStatus from '@/hooks/useControlSidebarStatus/useControlSidebarStatus';
 import Logo from '@/components/Logo/Logo';
 import SidebarItem from '@/components/SidebarItem/SidebarItem';
 import Dashboard from '@/components/Icons/Dashboard/Dashboard';
@@ -12,12 +12,8 @@ import Arrow from '@/components/Icons/Arrow/Arrow';
 import * as S from './Sidebar.styles';
 
 const Sidebar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useRecoilState(sidebarState);
   const [selectedItem, setSelectedItem] = useRecoilState(selectedSidebarOptionState);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  const { isSidebarOpen, toggleSidebarStatus } = useControlSidebarStatus();
 
   const handleItemClicked = (item: string): void => {
     setSelectedItem(item);
@@ -36,7 +32,7 @@ const Sidebar = () => {
         <SidebarItem icon={<Calendar />} label="calendário" isSelected={selectedItem === 'calendário'} onItemClicked={handleItemClicked} />
       </S.Items>
 
-      <S.ArrowContainer isSidebarOpen={isSidebarOpen} onClick={toggleSidebar}>
+      <S.ArrowContainer isSidebarOpen={isSidebarOpen} onClick={toggleSidebarStatus}>
         <Arrow isSidebarOpen={isSidebarOpen} />
       </S.ArrowContainer>
     </S.Sidebar>

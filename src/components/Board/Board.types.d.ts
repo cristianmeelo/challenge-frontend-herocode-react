@@ -67,7 +67,7 @@ interface Task {
 
   /**
    * The priority level of the task.
-   * @member {string}
+   * @member {TaskPriority}
    */
-  priority: string;
+  priority: TaskPriority;
 }

@@ -1,15 +1,9 @@
-import { useRecoilState } from 'recoil';
-
-import modalState from '@/context/atoms/modalState';
+import useControlModalStatus from '@/hooks/useControlModalStatus/useControlModalStatus';
 import Button from '@/components/Button/Button';
 import * as S from './Header.styles';
 
 const Header = () => {
-  const [isModalOpen, setIsModalOpen] = useRecoilState<boolean>(modalState);
-
-  const toggleModalStatus = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+  const { toggleModalStatus } = useControlModalStatus();
 
   return (
     <S.Header>

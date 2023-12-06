@@ -1,8 +1,9 @@
 import { Draggable, DraggableProvided } from '@hello-pangea/dnd';
-import TaskDeadline from './TaskDeadline/TaskDeadline';
+
 import TaskPriority from './TaskPriority/TaskPriority';
 import TaskTitle from './TaskTitle/TaskTitle';
 import TaskContent from './TaskContent/TaskContent';
+import TaskDeadline from './TaskDeadline/TaskDeadline';
 import * as S from './Task.styles';
 
 const Task = ({ task, index, column }: TaskProps) => (

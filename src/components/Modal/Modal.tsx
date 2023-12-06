@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import generateRandomTaskId from '@/functions/generateRandomTaskId/generateRandomTaskId';
 import initialTaskState from '@/context/atoms/initialTaskState';
-import modalState from '@/context/atoms/modalState';
+import useToggleModalStatus from '@/hooks/useControlModalStatus/useControlModalStatus';
 import Priority from '@/components/Board/Column/Task/TaskPriority/TaskPriority';
 import Button from '@/components/Button/Button';
 import TextArea from '@/components/TextArea/TextArea';
@@ -15,7 +15,7 @@ import * as S from './Modal.styles';
 
 const Modal = () => {
   const [columns, setColumns] = useRecoilState<Column[]>(initialTaskState);
-  const [isModalOpen, setIsModalOpen] = useRecoilState<boolean>(modalState);
+  const { isModalOpen, toggleModalStatus } = useToggleModalStatus();
 
   const [isFocused, setIsFocused] = useState(false);
   const [taskData, setTaskData] = useState<Task>({
@@ -42,7 +42,7 @@ const Modal = () => {
     }));
   };
 
-  const handlePriorityClick = (selectedPriority: string) => {
+  const handlePriorityClick = (selectedPriority: TaskPriority) => {
     setTaskData((prevData) => ({
       ...prevData,
       priority: selectedPriority,
@@ -110,10 +110,6 @@ const Modal = () => {
       progress: undefined,
       theme: 'colored',
     });
-  };
-
-  const toggleModalStatus = () => {
-    setIsModalOpen(!isModalOpen);
   };
 
   return (
