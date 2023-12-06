@@ -11,12 +11,12 @@
   </tr>
 </table>
 
-![](https://github.com/cristianmeelo/challenge-frontend-herocode-react/blob/master/thumbnail.png?raw=true)
+![](https://github.com/cristianmeelo/challenge-frontend-herocode-react/blob/main/thumbnail.png?raw=true)
 
-![](https://github.com/cristianmeelo/challenge-frontend-herocode-react/blob/master/thumbnail-mockup.png?raw=true#vitrinedev)
+![](https://github.com/cristianmeelo/challenge-frontend-herocode-react/blob/main/thumbnail-mockup.png?raw=true#vitrinedev)
 
 <div align="center">
-<a href="https://go-travel-website.netlify.app/">
+<a href="https://challenge-frontend-herocode-react.vercel.app/">
   <img src="https://img.shields.io/badge/-CHECK%20HERE-lightblue"
   alt="Image App" >
 </a>

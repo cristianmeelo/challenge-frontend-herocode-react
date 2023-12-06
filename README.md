@@ -11,9 +11,9 @@
   </tr>
 </table>
 
-![](https://github.com/cristianmeelo/challenge-frontend-herocode-react/blob/master/thumbnail.png?raw=true)
+![](https://github.com/cristianmeelo/challenge-frontend-herocode-react/blob/main/thumbnail.png?raw=true)
 
-![](https://github.com/cristianmeelo/challenge-frontend-herocode-react/blob/master/thumbnail-mockup.png?raw=true#vitrinedev)
+![](https://github.com/cristianmeelo/challenge-frontend-herocode-react/blob/main/thumbnail-mockup.png?raw=true#vitrinedev)
 
 <br/>
 
@@ -24,7 +24,7 @@ Bem vindos ao primeiro Tech Challenge da Hero Code. O objetivo deste challenge �
 O melhor de tudo é que quem ganhar a competição ainda vai levar um pix de R$100,00 🤑
 
 <div align="center">
-<a href="https://go-travel-website.netlify.app/">
+<a href="https://challenge-frontend-herocode-react.vercel.app/">
   <img src="https://img.shields.io/badge/-CONFIRA%20AQUI-lightblue" alt="Image App" >
 </a>
 </div>
