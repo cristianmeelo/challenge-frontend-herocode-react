@@ -1,3 +1,7 @@
+import { useRecoilState,  } from 'recoil';
+import sidebarState from '../../context/atoms/sidebarState';
+import selectedSidebarOptionState from '../../context/atoms/selectedSidebarOptionState';
+
 import Logo from '../Logo/Logo';
 import SidebarItem from '../SidebarItem/SidebarItem';
 import Dashboard from '../Icons/Dashboard/Dashboard';
@@ -7,7 +11,18 @@ import Calendar from '../Icons/Calendar/Calendar';
 import Arrow from '../Icons/Arrow/Arrow';
 import * as S from './Sidebar.styles';
 
-const Sidebar = ({ isSidebarOpen, toggleSidebar, selectedItem, handleItemClicked }: SidebarProps) => {
+const Sidebar = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useRecoilState(sidebarState);
+  const [selectedItem, setSelectedItem] = useRecoilState(selectedSidebarOptionState);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
+
+    const handleItemClicked = (item: string): void => {
+    setSelectedItem(item);
+  };
+
   return (
     <S.Sidebar isSidebarOpen={isSidebarOpen}>
       <S.Logo isSidebarOpen={isSidebarOpen}>

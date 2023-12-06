@@ -1,9 +1,13 @@
 import { useState } from 'react';
+import { useRecoilState } from 'recoil';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 import generateRandomTaskId from '../../functions/generateRandomTaskId/generateRandomTaskId';
+import  initialTaskState  from '../../context/atoms/initialTaskState';
+import modalState from '../../context/atoms/modalState';
+
 import Priority from '../Board/Column/Task/TaskPriority/TaskPriority';
 import Button from '../Button/Button';
 import TextArea from '../TextArea/TextArea';
@@ -11,7 +15,10 @@ import TextField from '../TextField/TextField';
 import PickData from '../Icons/PickData/PickData';
 import * as S from './Modal.styles';
 
-const Modal = ({ isOpen, toggleModalStatus, columns, setColumns }: ModalProps) => {
+const Modal = () => {
+  const [columns, setColumns] = useRecoilState<Column[]>(initialTaskState);
+  const [isModalOpen, setIsModalOpen] = useRecoilState<boolean>(modalState);
+
   const [isFocused, setIsFocused] = useState(false);
   const [taskData, setTaskData] = useState<Task>({
     id: generateRandomTaskId(),
@@ -53,9 +60,7 @@ const Modal = ({ isOpen, toggleModalStatus, columns, setColumns }: ModalProps) =
   };
 
   const handleSubmit = () => {
-    // Verificar se todos os campos estão preenchidos
     if (!taskData.title || !taskData.content || !taskData.completionDate || !taskData.priority) {
-      // Se algum campo estiver vazio, exibir toast de aviso
       notifyError('Preencha todos os campos!');
       return;
     }
@@ -109,10 +114,14 @@ const Modal = ({ isOpen, toggleModalStatus, columns, setColumns }: ModalProps) =
       });
     };
 
+    const toggleModalStatus= ()=> {
+      setIsModalOpen(!isModalOpen)
+    }
+
 
   return (
     <div>
-      {isOpen && (
+      {isModalOpen && (
         <>
           <S.Overlay onClick={toggleModalStatus} />
           <S.ModalContainer>

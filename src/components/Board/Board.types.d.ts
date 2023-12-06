@@ -27,17 +27,7 @@ interface Column {
  * @interface
  */
 interface BoardProps extends DynamicContentProps {
-  /**
-   * An array of columns in the task management system.
-   * @member {Column[]}
-   */
-  columns: Column[];
 
-  /**
-   * A function to update the state of columns in the task management system.
-   * @member {React.Dispatch<React.SetStateAction<Column[]>>}
-   */
-  setColumns: React.Dispatch<React.SetStateAction<Column[]>>;
 }
 
 /**

@@ -1,8 +1,14 @@
 import { DragDropContext, DropResult } from '@hello-pangea/dnd';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import initialTaskState from '../../context/atoms/initialTaskState';
+import sidebarState from '../../context/atoms/sidebarState';
 import Column from './Column/Column';
 import * as S from './Board.styles';
 
-const Board = ({ isSidebarOpen, columns, setColumns }: BoardProps) => {
+const Board = () => {
+  const [columns, setColumns] = useRecoilState<Column[]>(initialTaskState);
+  const isSidebarOpen = useRecoilValue(sidebarState);
+
   const onDragEnd = (result: DropResult) => {
     const { source, destination, draggableId } = result;
     if (!destination) return;
