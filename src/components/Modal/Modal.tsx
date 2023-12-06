@@ -3,15 +3,14 @@ import { useRecoilState } from 'recoil';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import generateRandomTaskId from '../../functions/generateRandomTaskId/generateRandomTaskId';
-import initialTaskState from '../../context/atoms/initialTaskState';
-import modalState from '../../context/atoms/modalState';
-
-import Priority from '../Board/Column/Task/TaskPriority/TaskPriority';
-import Button from '../Button/Button';
-import TextArea from '../TextArea/TextArea';
-import TextField from '../TextField/TextField';
-import PickData from '../Icons/PickData/PickData';
+import generateRandomTaskId from '@/functions/generateRandomTaskId/generateRandomTaskId';
+import initialTaskState from '@/context/atoms/initialTaskState';
+import modalState from '@/context/atoms/modalState';
+import Priority from '@/components/Board/Column/Task/TaskPriority/TaskPriority';
+import Button from '@/components/Button/Button';
+import TextArea from '@/components/TextArea/TextArea';
+import TextField from '@/components/TextField/TextField';
+import PickData from '@/components/Icons/PickData/PickData';
 import * as S from './Modal.styles';
 
 const Modal = () => {

@@ -1,5 +1,6 @@
 import { useRecoilValue } from 'recoil';
-import sidebarState from '../../context/atoms/sidebarState';
+
+import sidebarState from '@/context/atoms/sidebarState';
 import * as S from './Timeline.styles';
 
 export const Timeline = () => {

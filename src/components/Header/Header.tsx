@@ -1,6 +1,7 @@
 import { useRecoilState } from 'recoil';
-import modalState from '../../context/atoms/modalState';
-import Button from '../Button/Button';
+
+import modalState from '@/context/atoms/modalState';
+import Button from '@/components/Button/Button';
 import * as S from './Header.styles';
 
 const Header = () => {

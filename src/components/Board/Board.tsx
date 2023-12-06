@@ -1,8 +1,9 @@
 import { DragDropContext, DropResult } from '@hello-pangea/dnd';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import initialTaskState from '../../context/atoms/initialTaskState';
-import sidebarState from '../../context/atoms/sidebarState';
-import Column from './Column/Column';
+
+import initialTaskState from '@/context/atoms/initialTaskState';
+import sidebarState from '@/context/atoms/sidebarState';
+import Column from '@/components/Board/Column/Column';
 import * as S from './Board.styles';
 
 const Board = () => {

@@ -1,5 +1,5 @@
 import { useRecoilValue } from 'recoil';
-import sidebarState from '../../context/atoms/sidebarState';
+import sidebarState from '@/context/atoms/sidebarState';
 import * as S from './Calendar.styles';
 
 export const Calendar = () => {

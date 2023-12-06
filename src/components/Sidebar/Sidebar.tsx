@@ -1,14 +1,14 @@
 import { useRecoilState } from 'recoil';
-import sidebarState from '../../context/atoms/sidebarState';
-import selectedSidebarOptionState from '../../context/atoms/selectedSidebarOptionState';
 
-import Logo from '../Logo/Logo';
-import SidebarItem from '../SidebarItem/SidebarItem';
-import Dashboard from '../Icons/Dashboard/Dashboard';
-import Timeline from '../Icons/Timeline/Timeline';
-import Event from '../Icons/Event/Event';
-import Calendar from '../Icons/Calendar/Calendar';
-import Arrow from '../Icons/Arrow/Arrow';
+import sidebarState from '@/context/atoms/sidebarState';
+import selectedSidebarOptionState from '@/context/atoms/selectedSidebarOptionState';
+import Logo from '@/components/Logo/Logo';
+import SidebarItem from '@/components/SidebarItem/SidebarItem';
+import Dashboard from '@/components/Icons/Dashboard/Dashboard';
+import Timeline from '@/components/Icons/Timeline/Timeline';
+import Event from '@/components/Icons/Event/Event';
+import Calendar from '@/components/Icons/Calendar/Calendar';
+import Arrow from '@/components/Icons/Arrow/Arrow';
 import * as S from './Sidebar.styles';
 
 const Sidebar = () => {
