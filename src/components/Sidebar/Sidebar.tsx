@@ -1,7 +1,5 @@
-import { useRecoilState } from 'recoil';
-
-import selectedSidebarOptionState from '@/context/atoms/selectedSidebarOptionState';
 import useControlSidebarStatus from '@/hooks/useControlSidebarStatus/useControlSidebarStatus';
+import useControlSidebarMenu from '@/hooks/useControlSidebarMenu/useControlSidebarMenu';
 import Logo from '@/components/Logo/Logo';
 import SidebarItem from '@/components/SidebarItem/SidebarItem';
 import Dashboard from '@/components/Icons/Dashboard/Dashboard';
@@ -12,12 +10,8 @@ import Arrow from '@/components/Icons/Arrow/Arrow';
 import * as S from './Sidebar.styles';
 
 const Sidebar = () => {
-  const [selectedItem, setSelectedItem] = useRecoilState(selectedSidebarOptionState);
   const { isSidebarOpen, toggleSidebarStatus } = useControlSidebarStatus();
-
-  const handleItemClicked = (item: string): void => {
-    setSelectedItem(item);
-  };
+  const { selectedItem, handleItemClicked } = useControlSidebarMenu();
 
   return (
     <S.Sidebar isSidebarOpen={isSidebarOpen}>

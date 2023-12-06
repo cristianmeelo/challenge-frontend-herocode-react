@@ -1,9 +1,9 @@
 const Logo = () => {
   return (
     <svg
-      width="161"
-      height="27"
-      viewBox="0 0 161 27"
+      width="168"
+      height="47"
+      viewBox="0 0 168 47"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Logo da sua aplicação"
@@ -16,6 +16,7 @@ const Logo = () => {
         fill="#48409E"
       />
     </svg>
+    
   );
 };
 export default Logo;

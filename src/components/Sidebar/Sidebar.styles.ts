@@ -16,7 +16,8 @@ export const Sidebar = styled.aside<StyledSidebar>`
 
 export const Logo = styled.div<StyledSidebar>`
   display: ${(props) => (props.isSidebarOpen ? 'flex' : 'none')};
-  padding: 3.5rem 4.125rem 0rem 3.5rem;
+  justify-content: center;
+  padding-top: 3.5rem;
 `;
 
 export const Items = styled.ul<StyledSidebar>`
@@ -24,7 +25,8 @@ export const Items = styled.ul<StyledSidebar>`
   flex-direction: column;
   justify-content: space-between;
   gap: 3.125rem;
-  padding: 5.4375rem 5.8125rem 0rem 3.75rem;
+  margin-top: 5.4375rem;
+  padding: 0 5.8125rem 0rem 3.75rem;
   cursor: pointer;
 `;
 
