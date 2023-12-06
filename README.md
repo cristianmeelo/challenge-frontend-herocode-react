@@ -17,7 +17,7 @@
 
 <br/>
 
-# Hero Code First Challenge
+# Taskban
 
 Bem vindos ao primeiro Tech Challenge da Hero Code. O objetivo deste challenge é preparar para um desafio técnico que é bastante comum em entrevistas de emprego, não só isso, mas também aprimorar habilidades de programação com o teste que foi preparado.
 
@@ -64,7 +64,7 @@ A ideia principal deste teste técnico é aprimorar os hardskills no frontend, e
 
 | :placard: Vitrine.Dev |                                                                                      |
 | --------------------- | ------------------------------------------------------------------------------------ |
-| :sparkles: Nome       | **Hero Code First Challenge**                                                        |
+| :sparkles: Nome       | **Taskban**                                                        |
 | :label: Tecnologias   | Vite, Typescript, Emotion, Recoil, Vercel Deployment, GitHub (tecnologias utilizadas) |
 | :rocket: URL          | https://challenge-frontend-herocode-react.vercel.app/                                |
 | :fire: Desafio        | https://github.com/HeroCodeBR/01-tech-challenge                                      |
