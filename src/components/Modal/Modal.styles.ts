@@ -7,7 +7,7 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 999;
+  z-index: +9999;
 `;
 
 export const ModalContainer = styled.div`
@@ -20,7 +20,7 @@ export const ModalContainer = styled.div`
   padding: 2rem 2.625rem 2.625rem 2.625rem;
   background-color: ${(props) => props.theme.colors.neutral.white_000};
   border-radius: 0.625rem;
-  z-index: 1000;
+  z-index: +9999;
 `;
 
 export const ModalTitle = styled.h1`
@@ -34,7 +34,7 @@ export const ModalInputs = styled.div`
   display: flex;
   flex-direction: column;
   margin: 2.125rem 0rem 3.5rem 0rem;
-  gap: 22px;
+  gap: 1.375rem;
 `;
 
 export const ModalActions = styled.div`
@@ -68,15 +68,14 @@ export const ColPriority = styled.div`
 export const Label = styled.span`
   margin-left: 26px;
   position: relative;
-  font-size: 0.875rem;
-  color: #495057;
-  background-color: #fff;
-  z-index: +999;
-  pointer-events: none;
   width: fit-content;
-
+  color: ${(props) => props.theme.colors.neutral.gray_400};
+  background-color: ${(props) => props.theme.colors.neutral.white_000};
+  font-size: 0.6875rem;
   font-weight: 400;
-  font-size: 11px;
+  z-index: +999;
+  text-transform: capitalize;
+  pointer-events: none;
 `;
 
 export const RowPriority = styled.div`

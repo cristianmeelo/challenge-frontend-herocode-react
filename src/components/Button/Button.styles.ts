@@ -1,16 +1,17 @@
 import styled from '@emotion/styled';
 
 export const Button = styled.button<ButtonProps>`
-  padding: 18px 22px;
-  height: 58px;
-  font-size: 18px;
-  font-weight: 500;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
   border-style: none;
   cursor: pointer;
 
-  ${({ shape }) => shape === 'rounded' && `border-radius: 20px; min-width: 180px;`}
-  ${({ shape }) => shape === 'square' && `border-radius: 0.625rem; min-width: 147px;`}
+  ${({ shape }) =>
+    shape === 'rounded' && `border-radius: 1.25rem; height:'37px'; min-width: 11.25rem;font-size: 0.875rem;font-weight: 600; padding: 0.625rem 3.1875rem;`}
+  ${({ shape }) =>
+    shape === 'square' && `border-radius: 0.625rem; height:'58px'; min-width: 9.1875rem; font-size: 1.125rem; font-weight: 500; padding: 1.125rem 1.375rem;`}
   
 
  
@@ -27,9 +28,9 @@ export const Button = styled.button<ButtonProps>`
       }
     `
       : `
-      padding: 0.625rem 4.25rem;
+      
       background-color: transparent;
-      border: 1px solid ${
+      border: 2px solid ${
         color === 'error'
           ? theme.colors.semantic.error.red_200
           : color === 'success'

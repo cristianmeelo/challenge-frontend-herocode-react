@@ -13,10 +13,10 @@ export const Label = styled.label`
   left: 10px;
   color: ${(props) => props.theme.colors.neutral.gray_400};
   background-color: ${(props) => props.theme.colors.neutral.white_000};
-  font-size: 0.875rem;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 400;
   z-index: +999;
+  text-transform: capitalize;
   pointer-events: none;
 `;
 
@@ -35,6 +35,12 @@ export const TextField = styled.input`
 
   &::-webkit-calendar-picker-indicator {
     display: none;
+  }
+
+  &::placeholder {
+    color: ${(props) => props.theme.colors.neutral.gray_300};
+    font-size: 0.875rem;
+    font-weight: 600;
   }
 `;
 

@@ -65,7 +65,7 @@ The main idea of ​​this technical test is to improve hardskills in the front
 
 | :placard: Vitrine.Dev |                                                                                   |
 | --------------------- | --------------------------------------------------------------------------------- |
-| :sparkles: Name       | **Taskban**                                                     |
+| :sparkles: Name       | **Taskban**                                                                       |
 | :label: Technologies  | Vite, Typescript, Emotion, Recoil, Vercel Deployment, GitHub ( used Technologies) |
 | :rocket: URL          | https://challenge-frontend-herocode-react.vercel.app/                             |
 | :fire: Challenge      | https://github.com/HeroCodeBR/01-tech-challenge                                   |

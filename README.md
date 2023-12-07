@@ -62,9 +62,9 @@ Em seguida, vá para <a href="http://localhost:5173/">http://localhost:5173/</a>
 O Hero Code, primeiro desadios é um aplicativo estilo Trello para criar task, e movimentar conforme seu status, desenvolvido a partir do design [Figma](https://www.figma.com/file/FN5DlLxrnGycHs4E49ebDi/Challenge-tech-01?type=design&node-id=0%3A1&mode=design&t=J5UIq1KW88YiL0zk-1) do [Hero Code](https://www.youtube.com/@herocodebr).
 A ideia principal deste teste técnico é aprimorar os hardskills no frontend, e de quebra, receber uma avaliação do código por participar da competição. Aproveitei para fazer um curso da [Alura](https://www.alura.com.br/curso-online-react-gerenciando-estado-recoil) de [Recoil](https://recoiljs.org/) e implementar esse gerenciador de estados naa aplicação. Ele é um opção pare resolvermos props drilling alternativamente como react context/redux/zustand. Foi muito rápido e simples de utilizá-lo, gostei do que experimentei.
 
-| :placard: Vitrine.Dev |                                                                                      |
-| --------------------- | ------------------------------------------------------------------------------------ |
-| :sparkles: Nome       | **Taskban**                                                        |
+| :placard: Vitrine.Dev |                                                                                       |
+| --------------------- | ------------------------------------------------------------------------------------- |
+| :sparkles: Nome       | **Taskban**                                                                           |
 | :label: Tecnologias   | Vite, Typescript, Emotion, Recoil, Vercel Deployment, GitHub (tecnologias utilizadas) |
-| :rocket: URL          | https://challenge-frontend-herocode-react.vercel.app/                                |
-| :fire: Desafio        | https://github.com/HeroCodeBR/01-tech-challenge                                      |
+| :rocket: URL          | https://challenge-frontend-herocode-react.vercel.app/                                 |
+| :fire: Desafio        | https://github.com/HeroCodeBR/01-tech-challenge                                       |

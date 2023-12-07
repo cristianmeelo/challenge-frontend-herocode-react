@@ -26,4 +26,10 @@ export const TextArea = styled.textarea`
   padding: 10px;
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.neutral.gray_300};
+
+  &::placeholder {
+    color: ${(props) => props.theme.colors.neutral.gray_300};
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
 `;
