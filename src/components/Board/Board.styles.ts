@@ -15,5 +15,5 @@ export const Board = styled.div`
   width: 100%;
   padding-left: 4rem;
   padding-right: 6.25rem;
-  padding-top: 4rem;
+  margin-top: 7.5625rem;
 `;

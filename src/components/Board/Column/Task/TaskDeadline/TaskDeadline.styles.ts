@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 
 export const Deadline = styled.div<DeadlineProps>`
   display: flex;
-  gap: 0.625rem;
   align-items: center;
+  gap: 0.625rem;
   font-size: 0.875rem;
   font-weight: 600;
   color: ${(props) =>

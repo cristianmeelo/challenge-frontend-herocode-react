@@ -2,20 +2,18 @@ import styled from '@emotion/styled';
 
 export const Button = styled.button<ButtonProps>`
   padding: 18px 22px;
+  height: 58px;
   font-size: 18px;
-
-  ${({ shape }) => shape === 'rounded' && `border-radius: 20px; min-width: 180px;`}
-  ${({ shape }) => shape === 'square' && `border-radius: 0.625rem; width: 200px;`}
-  
+  font-weight: 500;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   border-style: none;
   cursor: pointer;
 
-  @media (max-width: 768px) {
-    padding: 10px 10px;
-    font-size: 16px;
-    ${({ shape }) => shape === 'rounded' && `border-radius: 20px; min-width: 100%;`}
-  }
+  ${({ shape }) => shape === 'rounded' && `border-radius: 20px; min-width: 180px;`}
+  ${({ shape }) => shape === 'square' && `border-radius: 0.625rem; min-width: 147px;`}
+  
+
+ 
 
   ${({ variant, theme, color }) =>
     variant === 'contained'
@@ -48,4 +46,10 @@ export const Button = styled.button<ButtonProps>`
         color: ${theme.colors.primary.purple_600};
       }
     `}
+
+@media (max-width: 768px) {
+    padding: 10px 10px;
+    font-size: 16px;
+    ${({ shape }) => shape === 'rounded' && `border-radius: 20px; min-width: 100%;`}
+  }
 `;

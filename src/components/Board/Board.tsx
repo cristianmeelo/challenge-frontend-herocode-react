@@ -1,26 +1,35 @@
 import { DragDropContext, DropResult } from '@hello-pangea/dnd';
-import { useRecoilState, useRecoilValue } from 'recoil';
-
-import initialTaskState from '@/context/atoms/initialTaskState';
-import sidebarState from '@/context/atoms/sidebarState';
+import useHandleColumns from '@/hooks/useHandleColumns/useHandleColumns';
+import useControlSidebarStatus from '@/hooks/useControlSidebarStatus/useControlSidebarStatus';
 import Column from '@/components/Board/Column/Column';
 import * as S from './Board.styles';
 
 const Board = () => {
-  const [columns, setColumns] = useRecoilState<Column[]>(initialTaskState);
-  const isSidebarOpen = useRecoilValue(sidebarState);
+  const { isSidebarOpen } = useControlSidebarStatus();
+  const { columns, setColumns } = useHandleColumns();
 
   const onDragEnd = (result: DropResult) => {
     const { source, destination, draggableId } = result;
     if (!destination) return;
+
     const updatedColumns = [...columns];
-    const sourceColumn = updatedColumns.find((col) => col.id === source.droppableId);
-    const destinationColumn = updatedColumns.find((col) => col.id === destination.droppableId);
-    const taskToMove = sourceColumn?.tasks.find((task) => task.id === draggableId);
-    if (sourceColumn && destinationColumn && taskToMove) {
-      sourceColumn.tasks.splice(source.index, 1);
-      destinationColumn.tasks.splice(destination.index, 0, taskToMove);
-      setColumns(updatedColumns);
+    const sourceColumnIndex = updatedColumns.findIndex((col) => col.id === source.droppableId);
+    const destinationColumnIndex = updatedColumns.findIndex((col) => col.id === destination.droppableId);
+
+    if (sourceColumnIndex !== -1 && destinationColumnIndex !== -1) {
+      const sourceColumn = { ...updatedColumns[sourceColumnIndex] };
+      const destinationColumn = { ...updatedColumns[destinationColumnIndex] };
+      const taskToMoveIndex = sourceColumn.tasks.findIndex((task) => task.id === draggableId);
+
+      if (taskToMoveIndex !== -1) {
+        const updatedSourceTasks = [...sourceColumn.tasks];
+        const updatedDestinationTasks = [...destinationColumn.tasks];
+        const [movedTask] = updatedSourceTasks.splice(taskToMoveIndex, 1);
+        updatedDestinationTasks.splice(destination.index, 0, movedTask);
+        updatedColumns[sourceColumnIndex] = { ...sourceColumn, tasks: updatedSourceTasks };
+        updatedColumns[destinationColumnIndex] = { ...destinationColumn, tasks: updatedDestinationTasks };
+        setColumns(updatedColumns);
+      }
     }
   };
 

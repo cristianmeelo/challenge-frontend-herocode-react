@@ -6,7 +6,6 @@ export const Column = styled.div`
   height: 100%;
   min-width: 20.625rem;
   padding-bottom: 0.5rem;
-
   margin: 0rem 1.1875rem;
   margin-bottom: 10.5rem;
   background: ${(props) => props.theme.colors.neutral.gray_100};
@@ -15,8 +14,14 @@ export const Column = styled.div`
 `;
 
 export const ColumnTitle = styled.h3`
-  margin: 0.875rem 0rem 1.75rem 0.5625rem;
-  font-size: 20px;
-  font-weight: 600;
+  margin: 0.875rem 0rem 1.75rem 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: ${(props) => props.theme.colors.neutral.gray_400};
+`;
+
+export const ColumnCountTasks = styled.span`
+  font-size: 1.25rem;
+  font-weight: 400;
   color: ${(props) => props.theme.colors.neutral.gray_400};
 `;
