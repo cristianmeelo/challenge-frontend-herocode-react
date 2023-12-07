@@ -51,12 +51,12 @@ const useModalLogic = (): UseModalLogic => {
   const onResquestCloseModal = () => {
     toggleModalStatus();
     cleanTaskData();
-  }
+  };
 
   return {
     handleInputChange,
     handleSubmit,
-    onResquestCloseModal
+    onResquestCloseModal,
   };
 };
 

@@ -16,8 +16,6 @@ const Modal = () => {
   const { taskData } = useTaskData();
   const { handleInputChange, handleSubmit, onResquestCloseModal } = useModalLogic();
 
-  
-
   return (
     <div>
       {isModalOpen && (

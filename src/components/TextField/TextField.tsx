@@ -5,15 +5,12 @@ const TextField = ({ label, placeholder, icon, ...restProps }: TextFieldProps) =
     if (placeholder === 'Selecione a data de entrega') event.target.type = 'date';
   };
 
-  const handleBlur = (event: { target: { type: string } }) => {
-    if (placeholder === 'Selecione a data de entrega') event.target.type = 'text';
-  };
 
   return (
     <S.Container>
       <S.Label>{label}</S.Label>
       <S.TextFieldContainer>
-        <S.TextField placeholder={placeholder} onFocus={handleFocus} onBlur={handleBlur} type="text" {...restProps} maxLength={255} />
+        <S.TextField placeholder={placeholder} onFocus={handleFocus} type="text" {...restProps} maxLength={255} />
         {icon && <S.IconContainer>{icon}</S.IconContainer>}
       </S.TextFieldContainer>
     </S.Container>
