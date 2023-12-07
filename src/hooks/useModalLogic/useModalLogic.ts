@@ -48,9 +48,15 @@ const useModalLogic = (): UseModalLogic => {
     notifySuccess('Task adicionada com sucesso!');
   };
 
+  const onResquestCloseModal = () => {
+    toggleModalStatus();
+    cleanTaskData();
+  }
+
   return {
     handleInputChange,
     handleSubmit,
+    onResquestCloseModal
   };
 };
 

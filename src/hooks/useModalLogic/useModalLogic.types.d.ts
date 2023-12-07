@@ -15,4 +15,10 @@ interface UseModalLogic {
    * @function
    */
   handleSubmit: () => void;
+
+  /**
+   * Handles the action of close modal.
+   * @function
+   */
+  onResquestCloseModal: () => void;
 }

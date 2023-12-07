@@ -14,7 +14,9 @@ import * as S from './Modal.styles';
 const Modal = () => {
   const { isModalOpen, toggleModalStatus } = useControlModalStatus();
   const { taskData } = useTaskData();
-  const { handleInputChange, handleSubmit } = useModalLogic();
+  const { handleInputChange, handleSubmit, onResquestCloseModal } = useModalLogic();
+
+  
 
   return (
     <div>
@@ -56,7 +58,7 @@ const Modal = () => {
             </S.ModalInputs>
 
             <S.ModalActions>
-              <Button shape="rounded" variant="outlined" color="error" onClick={toggleModalStatus}>
+              <Button shape="rounded" variant="outlined" color="error" onClick={onResquestCloseModal}>
                 CANCELAR
               </Button>
               <Button shape="rounded" variant="outlined" color="secondary" onClick={handleSubmit}>
