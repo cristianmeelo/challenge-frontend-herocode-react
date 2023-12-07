@@ -15,12 +15,14 @@ export const ModalContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 47.43vw;
-  height: 28.9375rem;
-  padding: 2rem 2.625rem 2.625rem 2.625rem;
+  padding: 2.0625rem 2.6875rem 2.625rem 2.4375rem;
   background-color: ${(props) => props.theme.colors.neutral.white_000};
   border-radius: 0.625rem;
   z-index: +9999;
+
+  @media (min-width: 768px) {
+    width: 682px;
+  }
 `;
 
 export const ModalTitle = styled.h1`
@@ -53,20 +55,33 @@ export const ModalActions = styled.div`
 export const Row = styled.div`
   display: flex;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.375rem;
+  }
 `;
 
 export const ColCompletionDate = styled.div`
   display: flex;
   width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 export const ColPriority = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Label = styled.span`
-  margin-left: 26px;
+  margin-left: 1.625rem;
   position: relative;
   width: fit-content;
   color: ${(props) => props.theme.colors.neutral.gray_400};
@@ -76,13 +91,4 @@ export const Label = styled.span`
   z-index: +999;
   text-transform: capitalize;
   pointer-events: none;
-`;
-
-export const RowPriority = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 0 16px;
-  align-items: center;
-  justify-content: flex-end;
-  height: 100%;
 `;

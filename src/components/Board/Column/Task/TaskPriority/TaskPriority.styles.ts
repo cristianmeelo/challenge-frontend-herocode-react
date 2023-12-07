@@ -8,8 +8,9 @@ export const Priority = styled.span<TaskPriorityProps>`
   height: min-content;
   border-radius: 1.25rem;
   padding: 0.3125rem 0.9375rem;
+  font-size: 12px;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
 
   &::before {

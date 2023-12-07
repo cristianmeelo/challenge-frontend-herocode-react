@@ -3,7 +3,7 @@ import useToastNotifications from '../useToastNotifications/useToastNotification
 import useControlModalStatus from '../useControlModalStatus/useControlModalStatus';
 import useTaskData from '../useTaskData/useTaskData';
 
-const useModalLogic = () => {
+const useModalLogic = (): UseModalLogic => {
   const { columns, setColumns } = useHandleColumns();
   const { toggleModalStatus } = useControlModalStatus();
   const { notifySuccess, notifyError } = useToastNotifications();
@@ -17,13 +17,6 @@ const useModalLogic = () => {
         [name]: value,
       };
     });
-  };
-
-  const handlePriorityClick = (selectedPriority: TaskPriority) => {
-    setTaskData((prevData: Task) => ({
-      ...prevData,
-      priority: selectedPriority,
-    }));
   };
 
   const addTaskToColumn = (columns: Column[], columnId: string, task: Task): Column[] => {
@@ -57,7 +50,6 @@ const useModalLogic = () => {
 
   return {
     handleInputChange,
-    handlePriorityClick,
     handleSubmit,
   };
 };

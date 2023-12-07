@@ -16,7 +16,7 @@ interface UseTaskData {
    * @example
    * setTaskData({ id: '123', title: 'Task Title', ... });
    */
-  setTaskData: (newTaskData: Task) => void;
+  setTaskData: Dispatch<SetStateAction<Partial<Task>>>;
 
   /**
    * Resets the task data to its initial state.
