@@ -1,9 +1,9 @@
-import { useRecoilValue } from 'recoil';
-import sidebarState from '@/context/atoms/sidebarState';
+import useControlSidebarStatus from '@/hooks/useControlSidebarStatus/useControlSidebarStatus';
 import * as S from './Calendar.styles';
 
 export const Calendar = () => {
-  const isSidebarOpen = useRecoilValue(sidebarState);
+  const { isSidebarOpen } = useControlSidebarStatus();
+
 
   return <S.Container isSidebarOpen={isSidebarOpen}>Calendário</S.Container>;
 };

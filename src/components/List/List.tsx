@@ -1,10 +1,9 @@
-import { useRecoilValue } from 'recoil';
-
-import sidebarState from '@/context/atoms/sidebarState';
+import useControlSidebarStatus from '@/hooks/useControlSidebarStatus/useControlSidebarStatus';
 import * as S from './List.styles';
 
 export const List = () => {
-  const isSidebarOpen = useRecoilValue(sidebarState);
+  const { isSidebarOpen } = useControlSidebarStatus();
+
 
   return <S.Container isSidebarOpen={isSidebarOpen}>Lista</S.Container>;
 };
