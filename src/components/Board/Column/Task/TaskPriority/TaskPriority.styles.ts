@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Priority = styled.span<TaskPriorityProps>`
-  display: flex;
+  display: ${(props) => (props.isDoneColumn ? 'none' : 'flex')};
   align-items: center;
   position: relative;
   width: min-content;

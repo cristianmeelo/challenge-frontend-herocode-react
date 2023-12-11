@@ -6,8 +6,7 @@ import Timeline from '@/components/Timeline/Timeline';
 import Welcome from '@/components/Welcome/Welcome';
 
 const DynamicContent = () => {
-const { selectedItem } = useControlSidebarMenu();
-
+  const { selectedItem } = useControlSidebarMenu();
 
   switch (selectedItem) {
     case 'quadro':

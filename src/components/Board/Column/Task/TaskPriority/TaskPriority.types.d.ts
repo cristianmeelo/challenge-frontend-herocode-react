@@ -4,6 +4,11 @@
  */
 interface TaskPriorityProps extends React.SpanHTMLAttributes<HTMLSpanElement> {
   /**
+   * Indicates whether the task belongs to the "Done" column.
+   * @member {boolean}
+   */
+  isDoneColumn: boolean;
+  /**
    * The priority level of the task.
    * @member {TaskPriority}
    */

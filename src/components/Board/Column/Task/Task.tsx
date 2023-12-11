@@ -14,7 +14,7 @@ const Task = ({ task, index, column }: TaskProps) => (
         <TaskContent content={task.content} />
         <S.TaskActions>
           <TaskDeadline isDoneColumn={column === 'done'} completionDate={task.completionDate} />
-          <TaskPriority priority={task.priority} />
+          <TaskPriority isDoneColumn={column === 'done'} priority={task.priority} />
         </S.TaskActions>
       </S.Task>
     )}

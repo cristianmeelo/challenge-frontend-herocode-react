@@ -5,7 +5,6 @@ const TextField = ({ label, placeholder, icon, ...restProps }: TextFieldProps) =
     if (placeholder === 'Selecione a data de entrega') event.target.type = 'date';
   };
 
-
   return (
     <S.Container>
       <S.Label>{label}</S.Label>
