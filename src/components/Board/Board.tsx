@@ -10,6 +10,7 @@ const Board = () => {
 
   const onDragEnd = (result: DropResult) => {
     const { source, destination, draggableId } = result;
+
     if (!destination) return;
 
     const updatedColumns = [...columns];
@@ -22,12 +23,13 @@ const Board = () => {
       const taskToMoveIndex = sourceColumn.tasks.findIndex((task) => task.id === draggableId);
 
       if (taskToMoveIndex !== -1) {
-        const updatedSourceTasks = [...sourceColumn.tasks];
-        const updatedDestinationTasks = [...destinationColumn.tasks];
-        const [movedTask] = updatedSourceTasks.splice(taskToMoveIndex, 1);
-        updatedDestinationTasks.splice(destination.index, 0, movedTask);
-        updatedColumns[sourceColumnIndex] = { ...sourceColumn, tasks: updatedSourceTasks };
-        updatedColumns[destinationColumnIndex] = { ...destinationColumn, tasks: updatedDestinationTasks };
+        const movedTask = sourceColumn.tasks[taskToMoveIndex];
+        sourceColumn.tasks.splice(taskToMoveIndex, 1);
+        destinationColumn.tasks.splice(destination.index, 0, movedTask);
+
+        updatedColumns[sourceColumnIndex] = { ...sourceColumn };
+        updatedColumns[destinationColumnIndex] = { ...destinationColumn };
+
         setColumns(updatedColumns);
       }
     }
