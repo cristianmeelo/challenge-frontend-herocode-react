@@ -63,6 +63,12 @@ Em seguida, vá para <a href="http://localhost:5173/">http://localhost:5173/</a>
 A proposta do primeiro desafio do Hero Code,  é implementar um aplicativo estilo Trello com _features_ de criar _task_, e movimentar conforme seu _status_, desenvolvido a partir do design [Figma](https://www.figma.com/file/FN5DlLxrnGycHs4E49ebDi/Challenge-tech-01?type=design&node-id=0%3A1&mode=design&t=J5UIq1KW88YiL0zk-1) do [Hero Code](https://www.youtube.com/@herocodebr).
 A ideia principal deste teste técnico é aprimorar os _hardskills_ no _frontend_, e de quebra, receber uma avaliação do código por participar da competição. Aproveitei para fazer um curso da [Alura](https://www.alura.com.br/curso-online-react-gerenciando-estado-recoil) de [Recoil](https://recoiljs.org/) e implementar esse gerenciador de estados na aplicação. Ele é um opção pare resolvermos props drilling alternativamente como react context/redux/zustand. Foi muito rápido e simples de utilizá-lo, gostei do que experimentei.
 
+<b>Atualização 04/01/2023</b>
+<br/>
+🥇 O campeão da challenge foi este repositório que estás bisbilhotando ! 🥇
+<br/>
+A [Alexia Kattah](https://www.instagram.com/alexiakattah/) do [Hero Code](https://www.youtube.com/@herocodebr) fez um [vídeo de review](https://www.youtube.com/watch?v=2M0OK49v4Dw) dos códigos de vários desafiantes, nele você encontra os critérios empregados +  _insights_ sensacionais de programação, IU e UX.
+
 | :placard: Vitrine.Dev |                                                                                       |
 | --------------------- | ------------------------------------------------------------------------------------- |
 | :sparkles: Nome       | **Taskban**                                                                           |
