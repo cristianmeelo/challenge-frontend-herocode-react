@@ -60,8 +60,8 @@ Then go to <a href="http://localhost:5173/">http://localhost:5173/</a> in your b
 
 ## 📚 More tutorial information
 
-Hero Code, first challenge is a Trello-style application for creating tasks and moving them according to their status, developed based on the [Figma] design (https://www.figma.com/file/FN5DlLxrnGycHs4E49ebDi/Challenge-tech-01? type=design&node-id=0%3A1&mode=design&t=J5UIq1KW88YiL0zk-1) from [Hero Code](https://www.youtube.com/@herocodebr).
-The main idea of ​​this technical test is to improve hardskills in the frontend, and as a bonus, receive a code evaluation for participating in the competition. I took the opportunity to take a course from [Alura](https://www.alura.com.br/curso-online-react-gerenciando-estado-recoil) on [Recoil](https://recoiljs.org/) and implement this state manager in the application. It is an option for us to solve drilling props alternatively like react context/redux/zustand. It was very quick and simple to use, I liked what I tried.
+A proposta do primeiro desafio do Hero Code, é implementar um aplicativo estilo Trello com _features_ de criar _task_, e movimentar conforme seu _status_, desenvolvido a partir do design [Figma](https://www.figma.com/file/FN5DlLxrnGycHs4E49ebDi/ Challenge-tech-01?type=design&node-id=0%3A1&mode=design&t=J5UIq1KW88YiL0zk-1) do [Hero Code](https://www.youtube.com/@herocodebr).
+A ideia principal deste teste técnico é aprimorar os _hardskills_ no _frontend_, e de quebra, receber uma avaliação do código por participar da competição. Aproveitei para fazer um curso da [Alura](https://www.alura.com.br/curso-online-react-gerenciando-estado-recoil) de [Recoil](https://recoiljs.org/) e implementar esse gerenciador de estados na aplicação. Ele é uma opção para resolvermos props drill alternativamente como react context/redux/zustand. Foi muito rápido e simples de utilizá-lo, gostei do que experimentei.
 
 | :placard: Vitrine.Dev |                                                                                   |
 | --------------------- | --------------------------------------------------------------------------------- |
